@@ -1,12 +1,12 @@
-interface Props {
-    
+
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  text: string; 
 }
 
-const Boton = (props: Props) => {
+const Boton : React.FC<Props> = (Props) => {
 
     return(
-        <>
-        </>
+        <button type={Props.type}>{Props.text}</button>
     )
 };
 

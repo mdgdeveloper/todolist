@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import 'fontsource-roboto';
+// import "nes.css/css/nes.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
