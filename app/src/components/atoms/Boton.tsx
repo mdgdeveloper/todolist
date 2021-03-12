@@ -6,7 +6,9 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Boton : React.FC<Props> = (Props) => {
 
     return(
-        <button type={Props.type}>{Props.text}</button>
+      <div style={{ paddingTop: '5px', paddingBottom: '5px'}}>
+        <button type={Props.type} className="nes-btn is-primary">{Props.text}</button>
+      </div>
     )
 };
 

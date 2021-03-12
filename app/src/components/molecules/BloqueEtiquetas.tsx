@@ -46,7 +46,9 @@ const BloqueEtiquetas = (props: Props) => {
             <>
             <ListaEtiquetas etiquetas={listaEtiquetas} />
             <><EntradaForm setTareaInput={setEtiqueta} tareaInput={etiqueta}/></>
-            <a href='#/' onClick={addNewEtiqueta}>[+]</a>
+            <div style={{ paddingTop: '5px', paddingBottom: '5px'}}>
+            <button type='button' className="nes-btn is-warning" onClick={addNewEtiqueta}>+</button>
+            </div>
             </>
         : <></>}
         </div>

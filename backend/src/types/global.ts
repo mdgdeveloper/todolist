@@ -16,6 +16,13 @@ export type Tarea = {
 
 }
 
+export type TareaDB = {
+    tarea: string;
+    proyecto: string;
+
+}
+
+
 
 export type TareaFinal = {
     id: number;
@@ -26,4 +33,12 @@ export type TareaFinal = {
 
 export type Etiqueta = {
     nombre: string;
+}
+
+export type idResult = {
+    id: number;
+}
+
+export type EtiquetaResult = {
+    etiquetaID: number;
 }

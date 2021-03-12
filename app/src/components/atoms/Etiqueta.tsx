@@ -1,16 +1,17 @@
 // Material UI
-import Box from '@material-ui/core/Box';
 
 interface Props {
-    nombre: string;   
+  nombre: string;
 }
 
 const Etiqueta: React.FC<Props> = ({ nombre }) => {
-    return (
-        <Box>
-           {nombre} 
-        </Box>
-    )
-}
+  return (
+   <>
+      <a href="#/" className="nes-btn is-success" style={{fontSize: '0.8em'}}>
+        {nombre}
+      </a><span>&nbsp;</span>
+      </>
+  );
+};
 
-export default Etiqueta
+export default Etiqueta;

@@ -7,9 +7,9 @@ interface Props {
 const ListaEtiquetas = (props: Props) => {
     return (
         <div>
-        {props.etiquetas.map( etiqueta => {
+        {props.etiquetas.map( (etiqueta,index) => {
             return(
-            <Etiqueta nombre={etiqueta} />
+            <Etiqueta nombre={etiqueta} key={index}/>
             );
         }) }
         </div>

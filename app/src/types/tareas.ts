@@ -5,3 +5,8 @@ export type Tarea = {
     etiquetas: string[];
 }
 
+export type TareaDB = {
+    tarea: string;
+    proyecto: string;
+    etiquetas: string[];
+}

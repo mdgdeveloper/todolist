@@ -1,40 +1,17 @@
 // Styles
 
-
 // Componentes
 import Etiqueta from "./Etiqueta";
 
 // Componentes visuales
-import Box from "@material-ui/core/Box";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import CardActions from "@material-ui/core/CardActions";
 import Checkbox from "@material-ui/core/Checkbox";
-import CircleCheckedFilled from "@material-ui/icons/CheckCircle";
-import CircleUnchecked from "@material-ui/icons/RadioButtonUnchecked";
+import Grid from "@material-ui/core/Grid";
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
-// Estilos
-import { makeStyles } from "@material-ui/core/styles";
 
-// Definicion de estilos
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-    margin: "20px",
-  },
-  title: {
-    fontSize: 19,
-    margin: 0,
-  },
-  project: {
-    fontSize: 14,
-    backgroundColor: "#112233",
-    color: "white",
-    fontWeight: 600,
-    padding: 4,
-  },
-});
+
+
 
 type Props = {
   id: number;
@@ -51,50 +28,42 @@ const Tarea: React.FC<Props> = ({
   etiquetas,
   tareaCompletada,
 }) => {
-  const classes = useStyles();
-
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <Box display="flex" p={1}>
-          <Box p={1} >
-            <CardActions>
-              <Checkbox
-                icon={<CircleUnchecked />}
-                checkedIcon={<CircleCheckedFilled />}
-                onChange={() => {
-                  tareaCompletada(id);
-                }}
-              />
-            </CardActions>
-          </Box>
-          <Box p={1} flexGrow={1}>
-            <Typography
-              className={classes.title}
-              color="textPrimary"
-              gutterBottom
-            >
+    <div
+      className="nes-container is-rounded"
+      style={{ marginBottom: "25px", backgroundColor: "#EEEEEE" }}
+    >
+      <Grid container direction="row" justify="flex-start" alignItems="center">
+        <Grid item xs={11}>
+          <div>
+            <span className="nes-text" style={{ fontSize: "1.2em" }}>
               {tarea}
-            </Typography>
-            <Typography
-              display="inline"
-              className={classes.project}
-              color="textSecondary"
-              gutterBottom
-            >
-              {proyecto}
-            </Typography>
-            <Box>
-              {etiquetas ? (
-                etiquetas.map((etiqueta) => <Etiqueta nombre={etiqueta} />)
-              ) : (
-                <></>
-              )}
-            </Box>
-          </Box>
-        </Box>
-      </CardContent>
-    </Card>
+            </span>
+          </div>
+        </Grid>
+        <Grid item xs={1} style={{ paddingRight: '5px' }}>
+          <Checkbox
+            icon={<i className="nes-icon coin is-medium"></i>}
+            checkedIcon={<i className="nes-icon close is-medium"></i>}
+            onChange={() => {
+              tareaCompletada(id);
+            }}
+          />
+        </Grid>
+      </Grid>
+
+      <div style={{ paddingBottom: "5px", paddingTop: "5px" }}>
+        <a href="#/" className="nes-btn is-warning">
+          {proyecto}
+        </a>
+      </div>
+
+      {etiquetas ? (
+        etiquetas.map((etiqueta) => <Etiqueta nombre={etiqueta} />)
+      ) : (
+        <></>
+      )}
+    </div>
   );
 };
 

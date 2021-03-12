@@ -2,8 +2,8 @@ POST http://localhost:8080/api/tareas
 Content-Type: application/json
 
 {
-"id": "3",
 "tarea": "Tarea en remoto",
-"proyecto": "Desarrollo"
+"proyecto": "Desarrollo",
+"etiquetas": ["Casa", "piano", "diferente8"]
 }
 
