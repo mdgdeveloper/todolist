@@ -6,8 +6,7 @@ import Etiqueta from "./Etiqueta";
 // Componentes visuales
 import Checkbox from "@material-ui/core/Checkbox";
 import Grid from "@material-ui/core/Grid";
-import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
+
 
 
 
