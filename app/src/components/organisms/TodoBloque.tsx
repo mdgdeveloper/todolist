@@ -31,7 +31,7 @@ const TodoBloque: React.FC<Props> = () => {
         container
         direction="row"
         justify="center"
-        alignItems="center"
+        alignItems="flex-start"
         spacing={3}
       >
         <Grid item xs={6}>
